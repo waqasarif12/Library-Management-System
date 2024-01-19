@@ -1,0 +1,17 @@
+<div class="row">
+    {{#each books}}
+    <div class="col col-sm-3 book-item">
+        <form method="POST" action="/book/purchase/{{this._id}}">
+            <div class="book-body">
+                Book Name: {{this.book_name}} <br>
+                <img src={{this.cover_image}} width="200" height="200"> <br>
+                Author: {{this.author_name}}<br>
+                ISBN: {{this.isbn}}
+            </div>
+            <div class="book-footer">
+                <input type="submit" class="btn btn-info" value="Purchase"> 
+            </div>
+        </form>
+    </div>
+    {{/each}}
+</div>
